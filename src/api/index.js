@@ -1,15 +1,8 @@
-const express = require('express');
+const express = require("express");
+const app = express();
 
-const emojis = require('./emojis');
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
-const router = express.Router();
+app.listen(3000, () => console.log("Server ready on port 3000."));
 
-router.get('/', (req, res) => {
-  res.json({
-    message: 'API - 👋🌎🌍🌏',
-  });
-});
-
-router.use('/emojis', emojis);
-
-module.exports = router;
+module.exports = app;
