@@ -5,7 +5,7 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-const middlewares = require('./middlewares.js');
+const middlewares = require('./middlewares');
 const api = require('./api');
 const { parse } = require('dotenv');
 
@@ -22,7 +22,7 @@ const users=[
   {id:3,nombre:"Pedro",apellido:"Alvarez",telefono:"987654321"},
   {id:4,nombre:"Marcos",apellido:"Silva",telefono:"987123654"}
   ]
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.json({
     message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄',
   });
