@@ -1,15 +1,9 @@
 const express = require('express');
+const app = express();
 
-const emojis = require('./emojis');
-
-const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.json({
-    message: 'API - 👋🌎🌍🌏',
-  });
+// Tu lógica aquí
+app.get('/', (req, res) => {
+  res.status(200).send('¡Hola desde el backend en Vercel!');
 });
 
-router.use('/emojis', emojis);
-
-module.exports = router;
+module.exports = app;

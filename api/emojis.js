@@ -1,9 +1,4 @@
-const express = require('express');
+const app = require('./index');
+const serverless = require('serverless-http');
 
-const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.json(['😀', '😳', '🙄']);
-});
-
-module.exports = router;
+module.exports = serverless(app);
