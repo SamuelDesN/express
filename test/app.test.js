@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-const app = require('../src/app');
+const app = require('./app');
 
 describe('app', () => {
   it('responds with a not found message', (done) => {
