@@ -4,8 +4,8 @@
   "description": "A basic starter for an express.js API",
   "main": "index.js",
   "scripts": {
-    "start": "node ./api/index.js",
-    "dev": "nodemon ./api/index.js",
+    "start": "node ./api/app.js",
+    "dev": "nodemon ./api/app.js",
     "test": "jest"
   },
   "keywords": [],
