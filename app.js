@@ -22,7 +22,7 @@ const users=[
   {id:3,nombre:"Pedro",apellido:"Alvarez",telefono:"987654321"},
   {id:4,nombre:"Marcos",apellido:"Silva",telefono:"987123654"}
   ]
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.json({
     message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄',
   });
