@@ -26,11 +26,11 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
   res.json(users);
 });
 
-app.get('/users/:id', (req, res) => {
+app.get('/api/users/:id', (req, res) => {
   const userId = parseInt(req.params.id, 10);
   const user = users.find((u) => u.id === userId);
   if (user) {
@@ -40,7 +40,7 @@ app.get('/users/:id', (req, res) => {
   }
 });
 
-app.post('/users', (req, res) => {
+app.post('/api/users', (req, res) => {
   const user = req.body;
   user.id = users.length + 1;
   users.push(user);
