@@ -5,7 +5,7 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-const middlewares = require('./middlewares');
+const middlewares = require('./middlewares.js');
 const api = require('./api');
 const { parse } = require('dotenv');
 
